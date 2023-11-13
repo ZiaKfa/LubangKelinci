@@ -117,7 +117,7 @@ function editUndangan($data){
     $tanggal = $data["tanggal"];
     $jam = $data["jam"];
     $tempat = $data["tempat"];
-    $update_query = "UPDATE undangan SET id_pengundang = '$id_pengundang', id_tamu = '$id_tamu', tanggal = '$tanggal', jam = '$jam', tempat = '$tempat' WHERE id_pengundang = ".$_GET["idpengundang"]." AND id_tamu = ".$_GET["idtamu"]."";
+    $update_query = "UPDATE undangan SET id_pengundang = '$id_pengundang', id_tamu = '$id_tamu', tanggal = '$tanggal', jam = '$jam', tempat = '$tempat' WHERE id_pengundang = '".$_GET["idpengundang"]."' AND id_tamu = '".$_GET["idtamu"]."' AND tanggal = '".$_GET["tanggal"]."'";
     $update_result = mysqli_query($mysqli, $update_query);
     if($update_result){
         $affected_rows = mysqli_affected_rows($mysqli);
@@ -131,9 +131,9 @@ function editUndangan($data){
     }
 }
 
-function deleteUndangan($pengundang,$tamu){
+function deleteUndangan($pengundang,$tamu,$tanggal){
     global $mysqli;
-    $delete_query = "DELETE FROM undangan WHERE id_pengundang = '$pengundang' AND id_tamu = '$tamu'";
+    $delete_query = "DELETE FROM undangan WHERE id_pengundang = '$pengundang' AND id_tamu = '$tamu' AND tanggal = '$tanggal' ";
     $delete_result = mysqli_query($mysqli, $delete_query);
     if($delete_result){
         $affected_rows = mysqli_affected_rows($mysqli);
@@ -146,4 +146,21 @@ function deleteUndangan($pengundang,$tamu){
         return false;
     }
 }
+
+function selectUndangan($id_pengundang, $id_tamu, $tanggal){
+    global $mysqli;
+    $select_query = "SELECT * FROM undangan WHERE id_pengundang = '$id_pengundang' AND id_tamu = '$id_tamu' AND tanggal = '$tanggal'";
+    $select_result = mysqli_query($mysqli, $select_query);
+    if($select_result){
+        $affected_rows = mysqli_affected_rows($mysqli);
+        if($affected_rows > 0){
+            return mysqli_fetch_assoc($select_result);
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
 ?>

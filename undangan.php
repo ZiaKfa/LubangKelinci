@@ -56,7 +56,7 @@
                     echo "<td>".$row["tanggal"]."</td>";
                     echo "<td>".$row["jam"]."</td>";
                     echo "<td>".$row["tempat"]."</td>";
-                    echo "<td><a href='edit_undangan.php?idpengundang=".$row["id_pengundang"]."&idtamu=".$row["id_tamu"]."'>Edit</a> | <a href='delete_undangan.php?idpengundang=".$row["id_pengundang"]."&idtamu=".$row["id_tamu"]."'>Delete</a></td>";
+                    echo "<td><a href='edit_undangan.php?idpengundang=".$row["id_pengundang"]."&idtamu=".$row["id_tamu"]."&tanggal=".$row["tanggal"]."'>Edit</a> | <a href='delete_undangan.php?idpengundang=".$row["id_pengundang"]."&idtamu=".$row["id_tamu"]."&tanggal=".$row["tanggal"]."'>Delete</a> | <a href='show_undangan.php?idpengundang=".$row["id_pengundang"]."&idtamu=".$row["id_tamu"]."&tanggal=".$row["tanggal"]."'>Show</a></td>";
                     echo "</tr>";
                     $num++;
                 }

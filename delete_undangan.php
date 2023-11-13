@@ -16,7 +16,8 @@
     }
     $id_pengundang = $_GET["idpengundang"];
     $id_tamu = $_GET["idtamu"];
-    if(deleteUndangan($id_pengundang, $id_tamu)){
+    $tanggal = $_GET["tanggal"];
+    if(deleteUndangan($id_pengundang, $id_tamu, $tanggal)){
         echo "<script>
             alert('Invitation deleted successfully');
             document.location.href = 'undangan.php';
