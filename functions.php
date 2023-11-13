@@ -1,11 +1,13 @@
 <?php
+session_start();
 require_once("config.php");
 //fungsi register
 function register($data){
     global $mysqli;
     $username = strtolower(stripslashes($data["username"]));
     $email = strtolower(stripslashes($data["email"]));
-    $nama = strtolower(stripslashes($data["nama"]));
+    $nama = $data["nama"];
+    $role = strtolower(stripslashes($data["role"]));
     $password = mysqli_real_escape_string($mysqli, $data["password"]);
     $password2 = mysqli_real_escape_string($mysqli, $data["password2"]);
 
@@ -29,7 +31,7 @@ function register($data){
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     //memasukan data ke database
-    mysqli_query($mysqli, "INSERT INTO user(username,email,nama,password) VALUES('$username', '$email','$nama', '$password')");
+    mysqli_query($mysqli, "INSERT INTO user(username,email,nama,role,password) VALUES('$username', '$email','$nama','$role','$password')");
     return mysqli_affected_rows($mysqli);
 }
 
@@ -54,3 +56,94 @@ function login($data){
         </script>";
     return false;
 }
+
+function editUser($data){
+    global $mysqli;
+    $id = $data["id"];
+    $username = strtolower(stripslashes($data["username"]));
+    $nama = $data["nama"];
+    $email = $data["email"];
+    if(isset($data["role"])){
+        $role = $data["role"];
+        $update_query = "UPDATE user SET username = '$username', nama = '$nama', email = '$email', role = '$role' WHERE id = '$id'";
+    } else {
+        $update_query = "UPDATE user SET username = '$username', nama = '$nama', email = '$email' WHERE id = '$id'";
+    }
+    $update_result = mysqli_query($mysqli, $update_query);
+    if($update_result){
+        $affected_rows = mysqli_affected_rows($mysqli);
+        if($affected_rows > 0){
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+function deleteUser($id){
+    global $mysqli;
+    $delete_query = "DELETE FROM user WHERE id = '$id'";
+    $delete_result = mysqli_query($mysqli, $delete_query);
+    if($delete_result){
+        $affected_rows = mysqli_affected_rows($mysqli);
+        if($affected_rows > 0){
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+function addUndangan($data){
+    global $mysqli;
+    $id_pengundang = $data["id_pengundang"];
+    $id_tamu = $data["id_tamu"];
+    $tanggal = $data["tanggal"];
+    $jam = $data["jam"];
+    $tempat = $data["tempat"];
+    $insert_query = "INSERT INTO undangan(id_pengundang, id_tamu, tanggal, jam, tempat) VALUES('$id_pengundang', '$id_tamu', '$tanggal', '$jam', '$tempat')";
+    mysqli_query($mysqli, $insert_query);
+    return mysqli_affected_rows($mysqli);
+}
+
+function editUndangan($data){
+    global $mysqli;
+    $id_pengundang = $data["id_pengundang"];
+    $id_tamu = $data["id_tamu"];
+    $tanggal = $data["tanggal"];
+    $jam = $data["jam"];
+    $tempat = $data["tempat"];
+    $update_query = "UPDATE undangan SET id_pengundang = '$id_pengundang', id_tamu = '$id_tamu', tanggal = '$tanggal', jam = '$jam', tempat = '$tempat' WHERE id_pengundang = ".$_GET["idpengundang"]." AND id_tamu = ".$_GET["idtamu"]."";
+    $update_result = mysqli_query($mysqli, $update_query);
+    if($update_result){
+        $affected_rows = mysqli_affected_rows($mysqli);
+        if($affected_rows > 0){
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+function deleteUndangan($pengundang,$tamu){
+    global $mysqli;
+    $delete_query = "DELETE FROM undangan WHERE id_pengundang = '$pengundang' AND id_tamu = '$tamu'";
+    $delete_result = mysqli_query($mysqli, $delete_query);
+    if($delete_result){
+        $affected_rows = mysqli_affected_rows($mysqli);
+        if($affected_rows > 0){
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+?>
