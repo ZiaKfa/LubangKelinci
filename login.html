@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Judson' rel='stylesheet'>
+    <style>
+    body{
+      font-family: 'Judson';
+    }
+      .container{
+        display: flex;
+        height: 100vh;
+      }
+      .kiri{
+        width: 40%;
+        height: 100%;
+        border: 1px solid black;
+      }
+      
+      .kanan{
+        width: 60%;
+        height: 100%;
+        border: 1px solid black;
+      }
+      
+      .login{
+        width: 50%;
+        min-height: 50%;
+        margin: auto;
+        margin-top: 15%;
+        /*background-color: black;*/
+      }
+      .inputan{
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 2px solid black;
+        width: 100%;
+      }
+      
+      .submitan{
+        background-color: #5EB1D3;
+        color: white;
+        border-radius: 30px;
+        font-size: 15px;
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="kiri"></div>
+      <div class="kanan">
+        <div class="login">
+          <center><h1>Login</h1></center>
+          <br>
+          <br>
+          <input type="text" name='username' class="inputan" placeholder="Username">
+          <br><br>
+          <input type="password" name='password' class="inputan" placeholder="Password">
+          <br><br>
+          <center><input type="submit" name='login' class="submitan"></center>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
