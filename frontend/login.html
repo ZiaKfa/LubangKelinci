@@ -6,36 +6,41 @@
     <style>
     body{
       font-family: 'Judson';
+      padding: auto;
+      margin: auto;
     }
       .container{
         display: flex;
         height: 100vh;
       }
       .kiri{
-        width: 40%;
+        width: 60%;
         height: 100%;
-        border: 1px solid black;
       }
       
       .kanan{
-        width: 60%;
+        width: 40%;
         height: 100%;
-        border: 1px solid black;
       }
       
       .login{
-        width: 50%;
+        width: 40%;
         min-height: 50%;
         margin: auto;
-        margin-top: 6%;
-        /*background-color: black;*/
+        margin-top: 20%;
       }
       .inputan{
         border-left: none;
         border-right: none;
         border-top: none;
         border-bottom: 2px solid black;
+        margin-top: 5px;
         width: 100%;
+      }
+
+      .inputan::placeholder{
+        font-size: 16px;
+        font-family: 'Judson';
       }
       
       .submitan{
@@ -47,6 +52,22 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 5px;
+        border: none;
+        font-family: 'Judson';
+      }
+
+      .submitan:hover{
+        background-color: white;
+        color: #5EB1D3;
+        border-radius: 30px;
+        font-size: 20px;
+        border: #5EB1D3 1px solid;
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+        font-family: 'Judson';
+        cursor: pointer;
       }
       
       .signup{
