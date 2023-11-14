@@ -29,28 +29,98 @@
     <title>Login</title>
 </head>
 <style>
-    h1{
-        text-align: center;
-        font: bold 30px Arial;
+    body{
+      font-family: 'Judson';
+      padding: auto;
+      margin: auto;
     }
+      .container{
+        display: flex;
+        height: 100vh;
+      }
+      .kiri{
+        width: 50%;
+        height: 100%;
+      }
+      
+      .kanan{
+        width: 40%;
+        height: 100%;
+      }
+      
+      .login{
+        width: 50%;
+        min-height: 50%;
+        margin: auto;
+        margin-top: 20%;
+      }
+      .inputan{
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 2px solid black;
+        margin-top: 5px;
+        width: 100%;
+      }
+
+      .inputan::placeholder{
+        font-size: 16px;
+        font-family: 'Judson';
+      }
+      
+      .submitan{
+        background-color: #5EB1D3;
+        color: white;
+        border-radius: 30px;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+        border: none;
+        font-family: 'Judson';
+      }
+
+      .submitan:hover{
+        background-color: white;
+        color: #5EB1D3;
+        border-radius: 30px;
+        font-size: 20px;
+        border: #5EB1D3 1px solid;
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+        font-family: 'Judson';
+        cursor: pointer;
+      }
+      
+      .signup{
+        font-size: 7px;
+      }
 </style>
 <body>
-    <h1>Login</h1>
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="username">Nickname :</label>
-                <input type="text" name="username" id="username" required>
-            </li>
-            <li>
-                <label for="password">Secret Word :</label>
-                <input type="password" name="password" id="password" required>
-            </li>
-            <li>
-                <button type="submit" name="login">Login</button>
-            </li>
-        </ul>
-    </form>
-    <a href="register.php">Register</a>
+<div class="container">
+      <div class="kiri">
+        <img src="login.jpg" width="100%"  height="100%"/>
+      </div>
+      <div class="kanan">
+        <div class="login">
+          <center><h1>Login</h1></center>
+          <br>
+          <br>
+          <form name="login" action="" method="post">
+          <input type="text" name='username' class="inputan" placeholder="Username">
+          <br><br>
+          <input type="password" name='password' class="inputan" placeholder="Password">
+            <p>Don't have an account? <a href="register.php">Sign up</a></p>
+          <br>
+          <center><button type="submit" name="login" class="submitan">Login</button></center>
+          </form>
+          <br>
+          
+        </div>
+      </div>
+    </div>
 </body>
 </html>
