@@ -31,7 +31,7 @@
     <table>
         <tr>
             <th>No</th>
-            <th>Username</th>
+            <th>Nickname</th>
             <th>Name</th>
             <th>Role</th>
             <th>Action</th>

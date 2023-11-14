@@ -28,6 +28,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
+<style>
+    h1{
+        text-align: center;
+        font: bold 30px Arial;
+    }
+</style>
 <body>
     <h1>Login</h1>
     <form action="" method="post">

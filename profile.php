@@ -19,7 +19,7 @@
 <body>
     <h1>Your Profile</h1>
         <form action="" method="post">
-            <label for="username">Username :</label>
+            <label for="username">Nickname :</label>
             <input type="text" name="username" id="username" value="<?php echo $username; ?>">
             <br>
             <label for="nama">Name :</label>
