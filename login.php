@@ -28,77 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<style>
-    body{
-      font-family: 'Judson';
-      padding: auto;
-      margin: auto;
-    }
-      .container{
-        display: flex;
-        height: 100vh;
-      }
-      .kiri{
-        width: 50%;
-        height: 100%;
-      }
-      
-      .kanan{
-        width: 40%;
-        height: 100%;
-      }
-      
-      .login{
-        width: 50%;
-        min-height: 50%;
-        margin: auto;
-        margin-top: 20%;
-      }
-      .inputan{
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        border-bottom: 2px solid black;
-        margin-top: 5px;
-        width: 100%;
-      }
-
-      .inputan::placeholder{
-        font-size: 16px;
-        font-family: 'Judson';
-      }
-      
-      .submitan{
-        background-color: #5EB1D3;
-        color: white;
-        border-radius: 30px;
-        font-size: 20px;
-        padding-top: 5px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 5px;
-        border: none;
-        font-family: 'Judson';
-      }
-
-      .submitan:hover{
-        background-color: white;
-        color: #5EB1D3;
-        border-radius: 30px;
-        font-size: 20px;
-        border: #5EB1D3 1px solid;
-        padding-top: 5px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 5px;
-        font-family: 'Judson';
-        cursor: pointer;
-      }
-      
-      .signup{
-        font-size: 7px;
-      }
-</style>
+   <link rel="stylesheet" href="style.css">
 <body>
 <div class="container">
       <div class="kiri">
