@@ -20,43 +20,45 @@ if(isset($_POST["register"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Judson' rel='stylesheet'>
 </head>
 <body>
-    <h1>Register Page</h1>
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="username">Nickname :</label>
-                <input type="text" name="username" id="username" required>
-            </li>
-            <li>
-                <label for="email">Email :</label>
-                <input type="email" name="email" id="email" required>
-            </li>
-            <li>
-                <label for="nama">Name :</label>
-                <input type="text" name="nama" id="nama" required>
-            </li>
-            <li>
-                <label for="role">Role :</label>
-                <select name="role" id="role">
-                    <option value="hatter">hatter</option>
-                    <option value="inhabitant">inhabitant</option>
-                </select>
-            <li>
-                <label for="password">Secret Word :</label>
-                <input type="password" name="password" id="password" required>
-            </li>
-            <li>
-                <label for="password2">Confirm The Secret Word :</label>
-                <input type="password" name="password2" id="password2" required>
-            </li>
-            <li>
-                <button type="submit" name="register">Register</button>
-            </li>
-        </ul>
-    </form>
-    <a href="login.php">Login</a>
+    <div class="container">
+        <div class="kiri">
+            <img src="register.jpg" alt="Registration" width="100%" height="100%">
+        </div>
+        <div class="kanan">
+            <div class="register">
+                <h1>Registration</h1>
+                <br>
+                <form action="" method="post">
+                    <table width="100%" cellpadding="15px">
+                        <tr>
+                            <td><input type="text" name="username" placeholder="Username" class="inputan"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="email" placeholder="Email" class="inputan"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="fullname" placeholder="Full Name" class="inputan"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="password" name="password" placeholder="Secret Word" class="inputan"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="password" name="password2" placeholder="Confirm your secret word"
+                                class="inputan"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <input type="submit" name="register" value="Sign Up" class="submitan">
+                    <p class="reminder">Already have an account? <a href="login.html"><i>Sign in</i></a></p>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

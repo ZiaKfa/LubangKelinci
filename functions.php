@@ -31,7 +31,7 @@ function register($data){
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     //memasukan data ke database
-    mysqli_query($mysqli, "INSERT INTO user(username,email,nama,role,password) VALUES('$username', '$email','$nama','$role','$password')");
+    mysqli_query($mysqli, "INSERT INTO user(username,email,nama,role,password) VALUES('$username', '$email','$nama','inhabitant','$password')");
     return mysqli_affected_rows($mysqli);
 }
 
