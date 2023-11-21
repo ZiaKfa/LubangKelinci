@@ -3,77 +3,7 @@
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Judson' rel='stylesheet'>
-    <style>
-    body{
-      font-family: 'Judson';
-      padding: auto;
-      margin: auto;
-    }
-      .container{
-        display: flex;
-        height: 100vh;
-      }
-      .kiri{
-        width: 50%;
-        height: 100%;
-      }
-      
-      .kanan{
-        width: 40%;
-        height: 100%;
-      }
-      
-      .login{
-        width: 50%;
-        min-height: 50%;
-        margin: auto;
-        margin-top: 20%;
-      }
-      .inputan{
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        border-bottom: 2px solid black;
-        margin-top: 5px;
-        width: 100%;
-      }
-
-      .inputan::placeholder{
-        font-size: 16px;
-        font-family: 'Judson';
-      }
-      
-      .submitan{
-        background-color: #5EB1D3;
-        color: white;
-        border-radius: 30px;
-        font-size: 20px;
-        padding-top: 5px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 5px;
-        border: none;
-        font-family: 'Judson';
-      }
-
-      .submitan:hover{
-        background-color: white;
-        color: #5EB1D3;
-        border-radius: 30px;
-        font-size: 20px;
-        border: #5EB1D3 1px solid;
-        padding-top: 5px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 5px;
-        font-family: 'Judson';
-        cursor: pointer;
-      }
-      
-      .signup{
-        font-size: 7px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
@@ -82,19 +12,26 @@
       </div>
       <div class="kanan">
         <div class="login">
-          <center><h1>Login</h1></center>
+          <h1>Sign In</h1>
           <br>
           <br>
           <form name="login" action="index" method="post">
-          <input type="text" name='username' class="inputan" placeholder="Username">
-          <br><br>
-          <input type="password" name='password' class="inputan" placeholder="Password">
-            <p>Don't have an account? <a href="register.html">Sign up</a></p>
+            <table width="100%" cellpadding="20px">
+              <tr>
+                <td><input type="text" name='username' class="inputan" placeholder="Username"></td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="password" name='password' class="inputan" placeholder="Password">
+                </td>
+              </tr>
+            </table>
           <br>
-          <center><input type="submit" name='login' value='Login' class="submitan"></center>
+          <br>
+          <br>
+          <input type="submit" name='login' value='Sign In' class="submitan">
+          <p class="reminder">Don't have an account? <a href="register.html"><i>Sign up</i></a></p>
           </form>
-          <br>
-          
         </div>
       </div>
     </div>
