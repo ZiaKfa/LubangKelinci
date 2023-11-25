@@ -248,8 +248,10 @@ color: #FFFF;
 }
 
 #kotak-undangan{
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   margin: auto;
-  
+  background-color: aqua;
+  border: solid black 5px;
+  border-radius: 20px;
 }
