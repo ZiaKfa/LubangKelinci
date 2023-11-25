@@ -234,3 +234,15 @@ color: #FFFF;
   display: flex;
   height: 100vh;
 }
+
+
+
+/*undangan*/
+#container-undangan{
+  background-image: url('bg-undangan.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  height: 100vh;
+}
