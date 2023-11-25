@@ -246,3 +246,10 @@ color: #FFFF;
   display: flex;
   height: 100vh;
 }
+
+#kotak-undangan{
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  
+}
