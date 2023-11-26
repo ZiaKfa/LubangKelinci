@@ -27,6 +27,7 @@
     <p>See all the inhabitant
         <a href="user.php">here</a>
     </p>
+    <a href="page1.html">story</a>
     <a href="logout.php">Logout</a>
 </body>
 </html>

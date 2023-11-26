@@ -14,26 +14,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Judson' rel='stylesheet'>
 </head>
 <body>
-    <h1>Your Profile</h1>
-        <form action="" method="post">
-            <label for="username">Nickname :</label>
-            <input type="text" name="username" id="username" value="<?php echo $username; ?>">
-            <br>
-            <label for="nama">Name :</label>
-            <input type="text" name="nama" id="nama" value="<?php echo $row["nama"]; ?>">
-            <br>
-            <label for="email">Email :</label>
-            <input type="email" name="email" id="email" value="<?php echo $row["email"]; ?>">
-            <br>
-            <label for="password">Secret Word</label>
-            <input type="password" name="password" id="password" placeholder="Enter your secret word to change profile">
-            <br>
-            <input type="hidden" name ="id" value ="<?php echo $row["id"] ?>">
-            <button type="submit" name="submit">Change Profile</button>
-        </form>
+    <div class="container-profile">
+        <div class="profile">
+            <h1 style="color: #FFFF;">Profile</h1>
+            <form action="" method="post">
+                <table cellpadding="8px">
+                        <tr>
+                            <td class="label-profile">Username :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="username" id="username" value="<?php echo $row["username"]; ?>"
+                                class="inputan-profile"></td>
+                        </tr>
+                        <tr>
+                            <td class="label-profile">Full Name :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="nama" id="nama" value="<?php echo $row["nama"];?>"
+                                class="inputan-profile"></td>
+                        </tr>
+                        <tr>
+                            <td class="label-profile">Email :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="email" id="email" value="<?php echo $row["email"];?>"
+                                class="inputan-profile"></td>
+                        </tr>
+                        <tr>
+                            <td class="label-profile">Secret word :</td>
+                        </tr>
+                        <tr>
+                            <td><input type="password" name="password" id="password"
+                                placeholder="Enter secret word to change your profile"
+                                class="inputan-profile"></td>
+                        </tr>
+                        <tr>
+                            <input type="hidden" name ="id" value="<?php echo $row["id"];?>">
+                        </tr>
+                </table>
+                <br>
+                <br>
+                <button type="submit" name="submit" class="submitan">Save Profile</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
 <?php
