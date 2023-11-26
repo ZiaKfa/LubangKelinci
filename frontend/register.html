@@ -16,7 +16,7 @@
             <div class="register">
                 <h1>Registration</h1>
                 <br>
-                <form action="index" method="post">
+                <form action="index" method="post" onsubmit="alertpattern()">
                     <table cellpadding="15px">
                         <tr>
                             <td><input type="text" name="username" placeholder="Username" class="inputan"></td>
@@ -28,11 +28,12 @@
                             <td><input type="text" name="fullname" placeholder="Full Name" class="inputan"></td>
                         </tr>
                         <tr>
-                            <td><input type="password" name="password" placeholder="Secret Word" class="inputan"></td>
+                            <td><input type="password" name="password" id="password" placeholder="Secret Word" 
+                                class="inputan" pattern="^[a-zA-Z]{7,}[0-9]{1,}$"></td>
                         </tr>
                         <tr>
                             <td><input type="password" name="password2" placeholder="Confirm your secret word"
-                                class="inputan"></td>
+                                class="inputan" pattern="^[a-zA-Z]{7,}[0-9]{1,}$"></td>
                         </tr>
                     </table>
                     <br>
@@ -43,5 +44,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
