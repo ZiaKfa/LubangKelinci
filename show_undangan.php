@@ -5,9 +5,11 @@
         exit;
     }
 
-    if($_SESSION["role"] !== "hatter"){
-        header("Location: index.php");
-        exit;
+    if(!isset($_GET["idpengundang"]) || !isset($_GET["idtamu"]) || !isset($_GET["tanggal"])){
+        echo "<script>
+                alert('You are not invited Yet !');
+                window.location.href = 'index.php';
+            </script>";
     }
 
     $id_pengundang = $_GET["idpengundang"];

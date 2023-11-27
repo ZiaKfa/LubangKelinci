@@ -14,20 +14,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Alice in Wonderland</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Judson' rel='stylesheet'>
+    
 </head>
 <body>
-    <h1>
-        Welcome <a href="profile.php"><?php echo $username; ?></a>
-    </h1>
-    <p>Or should i say <?php echo $row['nama'] ?> !</p>
-    <p>See all your invitation card
-        <a href="undangan.php">here</a>
-    </p>
-    <p>See all the inhabitant
-        <a href="user.php">here</a>
-    </p>
-    <a href="page1.html">story</a>
-    <a href="logout.php">Logout</a>
+    <div id="container-index">
+        <nav class="navbar">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class = "navlink">
+                <a href="#home">Home</a>
+                <a href="page1.html">Story</a>
+                <a href="profile.php">Profile</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </nav>
+        
+    </div>
+    <a href="<?php 
+        if($row["role"] == "hatter"){
+            echo "undangan.php";
+        }else{
+            echo "show_undangan.php?idtamu=".$row["id"];
+        }
+    ?>"><button class="inv"name="invite">Your Invitation</button></a>
 </body>
 </html>

@@ -42,7 +42,7 @@ if(isset($_POST["register"])){
                             <td><input type="email" name="email" placeholder="Email" class="inputan"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="fullname" placeholder="Full Name" class="inputan"></td>
+                            <td><input type="text" name="nama" placeholder="Full Name" class="inputan"></td>
                         </tr>
                         <tr>
                             <td><input type="password" name="password" placeholder="Secret Word" class="inputan"></td>
