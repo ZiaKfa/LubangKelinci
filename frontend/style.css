@@ -348,3 +348,37 @@ color: #FFFF;
   font-family: "Judson";
   margin-left: 12px;
 }
+
+.button-undangan {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 30px;
+  background-color: transparent;
+  color: #01A3A3;
+  border: solid 1px #01A3A3;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.button-undangan:hover {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 30px;
+  background-color: #01A3A3;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
