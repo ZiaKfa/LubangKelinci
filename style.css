@@ -301,7 +301,7 @@ font-size: 40px;
 }
 
 .late-border{
-border-top: solid black 2px;
+border-bottom: solid black 2px;
 width: 450px;
 margin-left: 50%;
 font-family: 'Literata', sans-serif;
@@ -369,4 +369,12 @@ margin-left: 12px;
   font-size: 30px;
   font-family: 'Judson';
   cursor: pointer;
+}
+
+.undangan-ttd {
+width: 100%;
+margin-bottom: 5px;
+margin-left: 50%;
+font-family: 'Literata',sans-serif;
+font-size: 30px;
 }

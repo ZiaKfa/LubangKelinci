@@ -36,7 +36,7 @@
         if($row["role"] == "hatter"){
             echo "undangan.php";
         }else{
-            echo "show_undangan.php?idtamu=".$row["id"];
+            echo "show_undangan.php?idpengundang=2&idtamu=".$row["id"]."&tanggal=".date("Y-m-d");
         }
     ?>"><button class="inv"name="invite">Your Invitation</button></a>
 </body>
