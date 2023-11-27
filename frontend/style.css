@@ -382,3 +382,29 @@ color: #FFFF;
   border-radius: 30px;
   cursor: pointer;
 }
+
+/*admin page*/
+.container-admin{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('admin.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  height: 100vh;
+}
+
+.kotak-admin{
+  width: 90%;
+  height: 80%;
+  margin: auto;
+}
+
+.tabel-user{
+  width: 60%;
+}
+
+.logo-admin {
+  width: 100px;
+  height: 75px;
+  margin-top: 10px;
+}

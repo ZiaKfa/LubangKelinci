@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        input,input:focus,input:valid{
+            width: 200px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 28px;
+        }
+        
+        .tabel-add-undangan{
+            width: 20%;
+            font-size: 30px;
+            color: #FFFF;
+        }
+
+        select{
+            width: 200px;
+            border: none;
+            height: 30px;
+            border-radius: 5px;
+        }
+        .submit{
+            width: 150px;
+            font-size: 30px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container-admin">
+        <img src="logo.png" alt="Logo" class="logo-admin">
+        <div class="kotak-admin">
+            <h1 style="color: #FFFF; text-align: left;">Add Invitation Data</h1><br>
+            <form action="" method="post">
+                <table class="tabel-add-undangan" cellpadding="15px">
+                    <tr>
+                        <td>Inviter</td>
+                        <td>:</td>
+                        <td><select name="id_admin" id="id_admin">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>Guest</td>
+                        <td>:</td>
+                        <td><select name="id_tamu" id="id_tamu">
+                            <option value=""></option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>:</td>
+                        <td><input type="date" name="tanggal" id="tanggal"></td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td>:</td>
+                        <td><input type="time" name="jam" id="jam"></td>
+                    </tr>
+                    <tr>
+                        <td>Place</td>
+                        <td>:</td>
+                        <td><input type="text" name="tempat" id="tempat"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button type="submit" name="submit" class="submit">submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
