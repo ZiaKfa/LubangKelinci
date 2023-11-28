@@ -15,30 +15,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Judson' rel='stylesheet'>
     <style>
-        table, th, td{
-            border: 1px solid black;
-            border-collapse: collapse;
-            cellspacing: 0;
-            padding: 10px;
-            
+        th{
+            background-color: #A4A3A3;
+            border-left: solid 1px #A4A3A3;
+            border-right: solid 1px #A4A3A3;
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
+        }
+
+        td{
+            background-color: white;
+            border-left: solid white;
+            border-right: solid white;
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
         }
     </style>
 </head>
 <body>
-    <h1>Your Invitation :</h1>
-    <p>Add new Invitation 
-        <a href="create_undangan.php">here</a>
-    </p>
-    <table>
-        <tr>
-            <th>No</th>
-            <th>Guest</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Place</th>
-            <th>Action</th>
-        </tr>
+<div class="container-admin">
+        <img src="logo.png" alt="Logo" class="logo-admin">
+        <br>
+        <div class="kotak-admin">
+            <h1 style="color: white; text-align: left;">All Inhabitants</h1>
+            <h3 style="color: white;">Add new Invitation <a href="create_undangan.php">here</a></h3>
+            <br>
+            <table class="tabel-user">
+                <tr>
+                    <th>No</th>
+                    <th>Guest</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Place</th>
+                    <th>Action</th>
+                </tr>
         <tr>
             <?php 
                 $num = 1;

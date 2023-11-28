@@ -39,5 +39,8 @@
             echo "show_undangan.php?idpengundang=2&idtamu=".$row["id"]."&tanggal=".date("Y-m-d");
         }
     ?>"><button class="inv"name="invite">Your Invitation</button></a>
+    <?php if ($row["role"] == "hatter") : ?>
+        <a href="user.php"><button class="usr"name="invite">All Inhabitant</button></a>
+    <?php endif; ?>
 </body>
 </html>

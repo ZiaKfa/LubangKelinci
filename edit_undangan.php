@@ -21,52 +21,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        input,input:focus,input:valid{
+            width: 200px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 28px;
+        }
+        
+        .tabel-add-undangan{
+            width: 20%;
+            font-size: 30px;
+            color: #FFFF;
+        }
+
+        select{
+            width: 200px;
+            border: none;
+            height: 30px;
+            border-radius: 5px;
+        }
+        .submit{
+            width: 150px;
+            font-size: 30px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        
+    </style>
     <title>Edit Invitation</title>
 </head>
 <body>
-    <h1>Edit Invitation Data</h1>
-    <form action="" method="post">
-        <label for="id_pengundang">Inviter :</label>
-        <select name="id_pengundang" id="id_pengundang">
-            <?php
-                $user_query = "SELECT * FROM user WHERE role = 'hatter'";
-                $user_result = mysqli_query($mysqli, $user_query);
-                while($row = mysqli_fetch_assoc($user_result)){
-                    echo "<option value='$row[id]'";
-                    if($row["id"] == $id_pengundang){
-                        echo "selected";
-                    }
-                    echo ">$row[nama]</option>";
-                }
-            ?>
-        </select>
-        <br>
-        <label for="id_tamu">Guest :</label>
-        <select name="id_tamu" id="id_tamu">
-            <?php
-                $user_query = "SELECT * FROM user WHERE role = 'inhabitant'";
-                $user_result = mysqli_query($mysqli, $user_query);
-                while($row = mysqli_fetch_assoc($user_result)){
-                    echo "<option value='$row[id]'";
-                    if($row["id"] == $id_tamu){
-                        echo "selected";
-                    }
-                    echo ">$row[nama]</option>";
-                }
-            ?>
-        </select>
-        <br>
-        <label for="tanggal">Date :</label>
-        <input type="date" name="tanggal" id="tanggal" value="<?php echo $undangan['tanggal'] ?>">
-        <br>
-        <label for="jam">Time :</label>
-        <input type="time" name="jam" id="jam" value="<?php echo $undangan['jam'] ?>">
-        <br>
-        <label for="tempat">Place :</label>
-        <input type="text" name="tempat" id="tempat" value="<?php echo $undangan['tempat'] ?>">
-        <br>
-        <button type="submit" name="submit">submit</button>
-    </form>
+    <div class="container-admin">
+        <img src="logo.png" alt="Logo" class="logo-admin">
+        <div class="kotak-admin">
+            <h1 style="color: #FFFF; text-align: left;">Add Invitation Data</h1><br>
+            <form action="" method="post">
+                <table class="tabel-add-undangan" cellpadding="15px">
+                    <tr>
+                        <td>Inviter</td>
+                        <td>:</td>
+                        <td><select name="id_pengundang" id="id_pengundang">
+                            <?php
+                                $user_query = "SELECT * FROM user WHERE role = 'hatter'";
+                                $user_result = mysqli_query($mysqli, $user_query);
+                                while($row = mysqli_fetch_assoc($user_result)){
+                                    echo "<option value='$row[id]'";
+                                    if($row["id"] == $id_pengundang){
+                                        echo "selected";
+                                    }
+                                    echo ">$row[nama]</option>";
+                                }
+                            ?>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>Guest</td>
+                        <td>:</td>
+                        <td><select name="id_tamu" id="id_tamu">
+                            <?php
+                                $user_query = "SELECT * FROM user WHERE role = 'inhabitant'";
+                                $user_result = mysqli_query($mysqli, $user_query);
+                                while($row = mysqli_fetch_assoc($user_result)){
+                                    echo "<option value='$row[id]'";
+                                    if($row["id"] == $id_tamu){
+                                        echo "selected";
+                                    }
+                                    echo ">$row[nama]</option>";
+                                }
+                            ?>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>:</td>
+                        <td><input type="date" name="tanggal" id="tanggal"></td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td>:</td>
+                        <td><input type="time" name="jam" id="jam"></td>
+                    </tr>
+                    <tr>
+                        <td>Place</td>
+                        <td>:</td>
+                        <td><input type="text" name="tempat" id="tempat" value = "<?php echo $undangan["tempat"] ?>"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button type="submit" name="submit" class="submit">submit</button>
+                            <button class="submit"><a href="undangan.php">back</a></button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
 <?php
